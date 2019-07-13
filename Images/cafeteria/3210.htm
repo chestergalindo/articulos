@@ -1,0 +1,174 @@
+<!DOCTYPE html><html lang="es-AR"><head>
+	
+			<script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KFLVG2"></script><script>
+				
+				window.onload = function(e){
+					var origEvent = location.toString();
+				    var my_url = location.pathname;
+				    if(location.toString().indexOf('my_acount.ssp') != -1 || location.toString().indexOf('checkout.ssp') != -1){
+				    	my_url = '/'+(location.toString().split("#")[1].split("?")[0] || origEvent.split("#")[1].split("?")[0]);
+				    }			    
+				    
+				    var bandera = 0;
+				    for(var a in window.dataLayer){
+						if(a === 'unique') continue;
+				    	if(window.dataLayer[a].event == 'pageView'){
+				    		bandera++;
+				    		window.dataLayer.splice(a, 1);
+				    	}
+				    }
+				    if(bandera == 0){
+				    	window.dataLayer.push({
+					    	"event": "pageView",
+					    	"data": {"page": my_url}
+					    });	
+				    }else{
+				    	bandera = 0;
+				    }
+				}	
+				window.onhashchange = function (e) {
+				    var origEvent = e.newURL;
+				    var my_url = location.pathname;
+				    if(location.toString().indexOf('my_acount.ssp') != -1 || location.toString().indexOf('checkout.ssp') != -1){
+				    	my_url = '/'+(location.toString().split("#")[1].split("?")[0] || origEvent.split("#")[1].split("?")[0]);
+				    }
+				    
+				    for(var a in window.dataLayer){
+						if(a === 'unique') continue;
+				    	window.mensaje = "aqui si entro";
+				    	if(window.dataLayer[a].event == 'pageView'){				    		
+				    		window.dataLayer.splice(a, 1);
+				    	}
+				    	window["mensaje"+a] = dataLayer;
+				    }
+			    	window.dataLayer.push({
+				    	"event": "pageView",
+				    	"data": {"page": my_url}
+				    });
+				}
+			</script>
+		
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer',"GTM-KFLVG2");
+	window.ofijs=function(){this.js = (this.js || 0)+1};</script>
+	<!-- End Google Tag Manager -->
+
+	<!--[if lte IE 9]>
+		<link rel="stylesheet" href="https://ofi.com.co/COL/v2/css_ie/shopping.css?t=1560438422064">
+	<![endif]-->
+
+	<!--[if lt IE 9]>
+		<script src="/COL/v2/javascript/html5shiv.min.js"></script>
+	  	<script src="/COL/v2/javascript/respond.min.js"></script>
+	<![endif]-->
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	
+	<meta name="description" content="Basado en México, OFI es un proveedor de soluciones de tecnología para empresas. Entra y conoce nuestro catálogo en computadoras, servidores y software.">
+	
+	<link rel="apple-touch-icon" sizes="57x57" href="https://ofi.com.co/COL/img/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="https://ofi.com.co/COL/img/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="https://ofi.com.co/COL/img/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="https://ofi.com.co/COL/img/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="https://ofi.com.co/COL/img/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="https://ofi.com.co/COL/img/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="https://ofi.com.co/COL/img/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="https://ofi.com.co/COL/img/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="https://ofi.com.co/COL/img/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="https://ofi.com.co/COL/img/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="https://ofi.com.co/COL/img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="https://ofi.com.co/COL/img/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="https://ofi.com.co/COL/img/favicon/favicon-16x16.png">
+	
+
+	<title>OFI.com.co | CRECE BIEN. CRECE MÁS</title>
+
+	<!---Start of Zendesk Chat Script--->
+	<iframe src="javascript:false" title="" style="display: none;"></iframe><script type="text/javascript">
+		/*<![CDATA[*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(e){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var e=this.createElement("script");n&&(this.domain=n),e.id="js-iframe-async",e.src="https://assets.zendesk.com/embeddable_framework/main.js",this.t=+new Date,this.zendeskHost="ofi.zendesk.com",this.zEQueue=a,this.body.appendChild(e)},o.write('<body onload="document._l();">'),o.close()}();
+		/*]]>*/
+	
+	</script>
+	<!---End of Zendesk Chat Script--->
+	
+	<link rel="stylesheet" href="https://ofi.com.co/COL/v2/css/homepagecomponents.css?t=1560438422064"> 
+</head>
+
+<body style="opacity:0;" class=" seo-support">
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFLVG2"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<noscript>
+	<div class="shopping-layout-no-javascript-msg">
+		<strong>Javascript is disabled on your browser.</strong><br>
+		To view this site, you must enable JavaScript or upgrade to a JavaScript-capable browser.
+	</div>
+</noscript>
+
+<div id="main" class="main"></div>
+
+<script>
+window.loadJs = function(url, t, next){
+	var time = '';
+	var datetime = new Date().getTime();
+	if(t){
+		time = 't=' + datetime;
+	}
+	var reference_tag = document.getElementsByTagName("script")[0];
+	var new_script_tag = document.createElement("script");
+	new_script_tag.src = url + time;
+	new_script_tag.type = "text/javascript";
+	new_script_tag.async = true;
+	new_script_tag.defer = true;
+	new_script_tag.onload = next;
+
+	reference_tag.parentNode.insertBefore(new_script_tag, reference_tag);
+}
+
+window.loadScripts = function(){
+	loadJs('https://ofi.com.co/COL/shopping.environment.ssp?lang=es_AR&cur=null&X-SC-Touchpoint=shopping&', true, function(){
+		loadJs('https://ofi.com.co/COL/v2/javascript/shopping.js?', true , function(){
+			loadJs('/cms/2/assets/js/postframe.js');
+			loadJs('/cms/2/cms.js', false, function(){
+				CMS.trigger('cms:load');
+			});
+		});
+	})
+	loadJs('https://ofi.com.co/COL/shopping.user.environment.ssp?lang=es_AR&cur=null&X-SC-Touchpoint=shopping&', true);
+}
+
+var SC=window.SC={ENVIRONMENT:{jsEnvironment:typeof nsglobal==='undefined'?'browser':'server'},isCrossOrigin:function(){return'ofi.com.co'!==document.location.hostname},isPageGenerator:function(){return typeof nsglobal!=='undefined'},getSessionInfo:function(key){var session=SC.SESSION||SC.DEFAULT_SESSION||{};return key?session[key]:session},getPublishedObject:function(key){return SC.ENVIRONMENT&&SC.ENVIRONMENT.published&&SC.ENVIRONMENT.published[key]?SC.ENVIRONMENT.published[key]:null}};if(!history.pushState&&SC.ENVIRONMENT.jsEnvironment==='browser'&&(location.pathname!=='/'||location.search!=='')&&location.hash===''){if(location.pathname==='/'){var hash=(RegExp('fragment='+'(.+?)(&|$)').exec(location.search)||[,''])[1];location.replace(location.pathname+location.search+'/#'+unescape(hash))}else{location.replace('/#'+location.pathname+location.search)}document.write('')}if(SC.isPageGenerator()){var metas=document.head.getElementsByTagName('meta');for(var i=0;i<metas.length;i++){if(metas[i].getAttribute('content')==='nofollow,noindex'){document.head.removeChild(metas[i])}}}if(!SC.isCrossOrigin()){document.getElementById('main').innerHTML='';if(SC.isPageGenerator()){document.body.className=document.body.className+' seo-support'}SC.ENVIRONMENT.seoSupport=!!~document.body.className.indexOf('seo-support');if(SC.isPageGenerator()){SC.ENVIRONMENT.PROFILE={}}if(SC.ENVIRONMENT.jsEnvironment==='browser'&&!SC.isCrossOrigin()){loadScripts()}}</script>
+
+<script type="text/javascript">
+    if(!SC.isPageGenerator()){
+       var _vwo_code=(function(){
+        var account_id=312873,
+        settings_tolerance=5000,
+        library_tolerance=5000,
+        use_existing_jquery=false,
+        f=false,d=document;return{use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){settings_timer=setTimeout('_vwo_code.finish()',settings_tolerance);var a=d.createElement('style'),b='body{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);this.load('//dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&r='+Math.random());return settings_timer;}};}());_vwo_settings_timer=_vwo_code.init();
+   }
+</script>
+
+<!--[if !IE]><!-->
+<link rel="stylesheet" href="https://ofi.com.co/COL/v2/css/shopping.css?t=1560438422064">
+<!--<![endif]-->
+
+
+
+
+<!-- SuiteCommerce Advanced Vinson [ bundle_id "" ] [ baselabel "SCA_Vinson" ] [ version "Vinson" ] [ datelabel "2016.00.00" ] [ buildno "0" ] -->
+<!-- 704 s: 41% #143 cache: 2% #137 -->
+<!-- Host [ sh34.prod.bos ] App Version [ 2019.1.0.105 ] -->
+<!-- COMPID [ 3803303 ] URL [ /s.nl ] Time [ Fri Jun 28 05:42:41 PDT 2019 ] -->
+<!-- Not logging slowest SQL -->
+<iframe data-product="web_widget" title="No content" tabindex="-1" aria-hidden="true" src="about:blank" style="width: 0px; height: 0px; border: 0px; position: absolute; top: -9999px;"></iframe></body></html>

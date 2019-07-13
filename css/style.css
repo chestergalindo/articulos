@@ -13,6 +13,11 @@ header{
     /* position: fixed; */
 }
 
+h2{
+    font-size: 1.7em;
+    text-transform: uppercase;
+}
+
 header a{
     color: white;
     text-transform: capitalize;
@@ -57,8 +62,9 @@ p{
 
 .products{
     display: grid;
-    grid-template-columns: repeat(3,minmax(100px,298px));
-    grid-gap: 28px;
+    grid-template-columns: repeat(5,minmax(100px,298px));
+    grid-row-gap: 10px;
+    grid-column-gap: 15px;
     justify-content: center;
 }
 
@@ -70,6 +76,7 @@ p{
 
 .art-image img{
     width: 130px;
+    /* height: 130px; */
 }
 
 .information{
@@ -78,7 +85,6 @@ p{
 }
 
 strong,
-h2,
 a{
     text-transform: uppercase;
     font-size: 1em;
@@ -89,11 +95,30 @@ p{
     font-size: 0.8em;
 }
 
-@media screen and (max-width:920px) {
+@media screen and (max-width:1655px) {
+    .products {
+        display: grid;
+        grid-template-columns: repeat(4,minmax(100px,298px));
+        grid-row-gap: 10px;
+        grid-column-gap: 15px;
+    }
+}
+
+@media screen and (max-width:1335px) {
+    .products {
+        display: grid;
+        grid-template-columns: repeat(3,minmax(100px,298px));
+        grid-row-gap: 10px;
+        grid-column-gap: 15px;
+    }
+}
+
+@media screen and (max-width:1040px) {
     .products {
         display: grid;
         grid-template-columns: repeat(2,minmax(100px,298px));
-        grid-gap: 20px;
+        grid-row-gap: 10px;
+        grid-column-gap: 15px;
     }
 }
 
@@ -101,6 +126,7 @@ p{
     .products {
         display: grid;
         grid-template-columns: repeat(1,minmax(100px,298px));
-        grid-gap: 20px;
+        grid-row-gap: 10px;
+        grid-column-gap: 15px;
     }
 }
