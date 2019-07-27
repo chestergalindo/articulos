@@ -1,4 +1,4 @@
-##Artículos  :tw-1f1f8:  :tw-1f310:
+##Artículos :tw-1f310:
 
 
 - Este espacio esta diseñado como una fuente de busqueda rapida y facil pra todas las personas que quieran realizar una compra en la Universidad.
