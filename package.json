@@ -1,0 +1,25 @@
+{
+  "name": "articulos",
+  "version": "1.0.0",
+  "description": "- Este espacio esta diseñado como una fuente de busqueda rapida y facil pra todas las personas que quieran realizar una compra en la Universidad.\r - Podras encontrar si necesitas conceptos y a que oficina solicitarlos.\r - Reducir tiempos de busqueda en artículos.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chestergalindo/articulos.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chestergalindo/articulos/issues"
+  },
+  "homepage": "https://github.com/chestergalindo/articulos#readme",
+  "dependencies": {
+    "postcss-apply": "^0.12.0",
+    "postcss-cli": "^6.1.3",
+    "postcss-custom-media": "^7.0.8",
+    "postcss-preset-env": "^6.7.0"
+  }
+}
