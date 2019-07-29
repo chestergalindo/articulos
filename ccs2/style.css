@@ -3,8 +3,14 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+:root{
+    --lcolor: #6D93B7;
+    --hccolor:rgb(48, 104, 156);
+}
+
 header{
     background-color: #6D93B7;
+    background-color: var(--lcolor);
     margin: 0;
     padding: 0;
     display: flex;
@@ -35,6 +41,7 @@ ol{
 
 h2{
     color: rgb(48, 104, 156);
+    color: var(--hccolor);
     text-align: center;
 }
 
@@ -53,6 +60,7 @@ p{
 .images{
     width: 298px;
     border: 3px solid #6D93B7;
+    border: 3px solid var(--lcolor);
     /* padding: 50px; */
     display: -ms-grid;
     display: grid;
@@ -144,7 +152,13 @@ p{
     font-size: 0.8em;
 }
 
-@media screen and (max-width:1655px) {
+@custom-media --Slarge screen and (min-width: 1655px);
+@custom-media --large screen and (max-width: 1654px);
+@custom-media --medium screen and (max-width: 1040px);
+@custom-media --small screen and (max-width: 670px);
+
+
+@media screen and (min-width: 1655px) {
     .products {
         display: -ms-grid;
         display: grid;
@@ -155,7 +169,19 @@ p{
     }
 }
 
-@media screen and (max-width:1335px) {
+
+@media (--Slarge) {
+    .products {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: (minmax(100px,298px))[4];
+        grid-template-columns: repeat(4,minmax(100px,298px));
+        grid-row-gap: 10px;
+        grid-column-gap: 15px;
+    }
+}
+
+@media screen and (max-width: 1654px) {
     .products {
         display: -ms-grid;
         display: grid;
@@ -166,7 +192,18 @@ p{
     }
 }
 
-@media screen and (max-width:1040px) {
+@media (--large) {
+    .products {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: (minmax(100px,298px))[3];
+        grid-template-columns: repeat(3,minmax(100px,298px));
+        grid-row-gap: 10px;
+        grid-column-gap: 15px;
+    }
+}
+
+@media screen and (max-width: 1040px) {
     .products {
         display: -ms-grid;
         display: grid;
@@ -177,7 +214,29 @@ p{
     }
 }
 
-@media screen and (max-width:670px){
+@media (--medium) {
+    .products {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: (minmax(100px,298px))[2];
+        grid-template-columns: repeat(2,minmax(100px,298px));
+        grid-row-gap: 10px;
+        grid-column-gap: 15px;
+    }
+}
+
+@media screen and (max-width: 670px){
+    .products {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: (minmax(100px,298px))[1];
+        grid-template-columns: repeat(1,minmax(100px,298px));
+        grid-row-gap: 10px;
+        grid-column-gap: 15px;
+    }
+}
+
+@media (--small){
     .products {
         display: -ms-grid;
         display: grid;
