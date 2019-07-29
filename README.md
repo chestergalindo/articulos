@@ -7,6 +7,6 @@
 
 Este repositorio esta compuesto de:
  - Html y css
- - Postcss (utilizado con Node)
+ - Postcss (utilizado NodeJS)
 
 Recuerda que siempre esta en construcción.
