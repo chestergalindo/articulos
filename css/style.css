@@ -21,31 +21,26 @@ header{
     left: 0;
     right: 0;
     height: 2.4em;
+    & a{
+        color: white;
+        text-transform: capitalize;
+        height: inherit;
+        font-weight: bold;
+    }
+    & ol li{
+        padding: 15px 10px;
+    }
 }
 
 h2{
     font-size: 1.7em;
     text-transform: uppercase;
-}
-
-header a{
-    color: white;
-    text-transform: capitalize;
-    height: inherit;
-    font-weight: bold;
-}
-
-header ol li{
-    padding: 15px 10px;
+    color: var(--hccolor);
+    text-align: center;
 }
 
 ol{
     margin: 0;
-}
-
-h2{
-    color: var(--hccolor);
-    text-align: center;
 }
 
 ol,
@@ -63,24 +58,17 @@ p{
 .images{
     width: 298px;
     border: 3px solid var(--lcolor);
-    /* padding: 50px; */
     display: grid;
     grid-template-rows: 180px 1fr;
     justify-content: center;
-    align-items: center
-}
-
-.images:hover .art-image{
-    animation-name: picture;
-    animation-duration: 1.5s;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in-out;
-    /* animation-direction: alternate;
-    animation-timing-function: steps(60); */
-    animation-fill-mode: forwards;
-    /* transform: scale(1.5);
-    /* transform: translate(100px);
-    transform: translateZ(100px); */
+    align-items: center;
+        &:hover .art-image {
+            animation-name: picture;
+            animation-duration: 1.5s;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+        }
 }
 
 @keyframes picture {
@@ -97,6 +85,12 @@ p{
     width: inherit;
     height: inherit;
     transition: .4s;
+    margin: 0;
+    display: grid;
+    justify-content: center;
+    & img{
+        width: 130px;
+    }
 }
 
 .products{
@@ -105,17 +99,18 @@ p{
     grid-row-gap: 10px;
     grid-column-gap: 15px;
     justify-content: center;
-}
-
-.art-image{
-    margin: 0;
-    display: grid;
-    justify-content: center;
-}
-
-.art-image img{
-    width: 130px;
-    /* height: 130px; */
+        @media (--Slarge) {
+            grid-template-columns: repeat(4,minmax(100px,298px))
+        }
+        @media (--large) {
+            grid-template-columns: repeat(3,minmax(100px,298px))
+        }
+        @media (--medium) {
+            grid-template-columns: repeat(2,minmax(100px,298px))
+        }
+        @media (--small){
+            grid-template-columns: repeat(1,minmax(100px,298px))
+        }
 }
 
 .information{
@@ -138,40 +133,3 @@ p{
 @custom-media --large screen and (width <= 1654px);
 @custom-media --medium screen and (width <= 1040px);
 @custom-media --small screen and (width <= 670px);
-
-
-@media (--Slarge) {
-    .products {
-        display: grid;
-        grid-template-columns: repeat(4,minmax(100px,298px));
-        grid-row-gap: 10px;
-        grid-column-gap: 15px;
-    }
-}
-
-@media (--large) {
-    .products {
-        display: grid;
-        grid-template-columns: repeat(3,minmax(100px,298px));
-        grid-row-gap: 10px;
-        grid-column-gap: 15px;
-    }
-}
-
-@media (--medium) {
-    .products {
-        display: grid;
-        grid-template-columns: repeat(2,minmax(100px,298px));
-        grid-row-gap: 10px;
-        grid-column-gap: 15px;
-    }
-}
-
-@media (--small){
-    .products {
-        display: grid;
-        grid-template-columns: repeat(1,minmax(100px,298px));
-        grid-row-gap: 10px;
-        grid-column-gap: 15px;
-    }
-}
