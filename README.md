@@ -1,5 +1,5 @@
-##Artículos :tw-1f310:
-
+### :tw-1f680: Pagina Para La Busqueda De Artículos
+------------
 
 - Este espacio esta diseñado como una fuente de busqueda rapida y facil pra todas las personas que quieran realizar una compra en la Universidad.
 - Podras encontrar si necesitas conceptos y a que oficina solicitarlos.
